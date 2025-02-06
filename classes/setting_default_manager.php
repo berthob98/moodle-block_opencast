@@ -88,7 +88,7 @@ class setting_default_manager {
      */
     public static function set_default_metadata($ocinstanceid = 1) {
         $configname = 'metadata_' . $ocinstanceid;
-        $currentmetadata = get_config('block_opencast', $configname);
+        $currentmetadata = get_config('tool_opencast', $configname);
         if (empty($currentmetadata)) {
             set_config($configname, self::get_default_metadata(), 'block_opencast');
         }
@@ -128,7 +128,7 @@ class setting_default_manager {
      */
     public static function set_default_metadataseries($ocinstanceid = 1) {
         $configname = 'metadataseries_' . $ocinstanceid;
-        $currentmetadata = get_config('block_opencast', $configname);
+        $currentmetadata = get_config('tool_opencast', $configname);
         if (empty($currentmetadata)) {
             set_config($configname, self::get_default_metadataseries(), 'block_opencast');
         }
@@ -152,7 +152,7 @@ class setting_default_manager {
      */
     public static function set_default_transcriptionflavors($ocinstanceid = 1) {
         $configname = 'transcriptionflavors_' . $ocinstanceid;
-        $currentmetadata = get_config('block_opencast', $configname);
+        $currentmetadata = get_config('tool_opencast', $configname);
         if (empty($currentmetadata)) {
             set_config($configname, self::get_default_transcriptionflavors(), 'block_opencast');
         }
@@ -177,7 +177,7 @@ class setting_default_manager {
      */
     public static function set_default_roles($ocinstanceid = 1) {
         $configname = 'roles_' . $ocinstanceid;
-        $currentmetadata = get_config('block_opencast', $configname);
+        $currentmetadata = get_config('tool_opencast', $configname);
         if (empty($currentmetadata)) {
             set_config($configname, self::get_default_roles(), 'block_opencast');
         }
@@ -199,7 +199,7 @@ class setting_default_manager {
      */
     public static function set_default_maxseries($ocinstanceid = 1) {
         $configname = 'maxseries_' . $ocinstanceid;
-        $currentmetadata = get_config('block_opencast', $configname);
+        $currentmetadata = get_config('tool_opencast', $configname);
         if (empty($currentmetadata)) {
             set_config($configname, self::get_default_maxseries(), 'block_opencast');
         }
@@ -221,7 +221,7 @@ class setting_default_manager {
      */
     public static function set_default_limitvideos($ocinstanceid = 1) {
         $configname = 'limitvideos_' . $ocinstanceid;
-        $currentmetadata = get_config('block_opencast', $configname);
+        $currentmetadata = get_config('tool_opencast', $configname);
         if (empty($currentmetadata)) {
             set_config($configname, self::get_default_limitvideos(), 'block_opencast');
         }

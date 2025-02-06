@@ -65,7 +65,7 @@ if ($courseid == $SITE->id && $series) {
 require_login($courseid, false);
 
 // Check if the setting is on.
-if (empty(get_config('block_opencast', 'batchuploadenabled_' . $ocinstanceid))) {
+if (empty(get_config('tool_opencast', 'batchuploadenabled_' . $ocinstanceid))) {
     throw new moodle_exception('batchupload_errornotenabled', 'block_opencast', $redirecturl);
 }
 
@@ -139,9 +139,9 @@ $customdata = [
 if ($series) {
     $customdata['series'] = $series;
 }
-$maxuploadsize = (int) get_config('block_opencast', 'uploadfilelimit_' . $ocinstanceid);
+$maxuploadsize = (int) get_config('tool_opencast', 'uploadfilelimit_' . $ocinstanceid);
 
-$videotypescfg = get_config('block_opencast', 'uploadfileextensions_' . $ocinstanceid);
+$videotypescfg = get_config('tool_opencast', 'uploadfileextensions_' . $ocinstanceid);
 if (empty($videotypescfg)) {
     // Fallback. Use Moodle defined video file types.
     $videotypes = ['video'];
