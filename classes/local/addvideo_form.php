@@ -79,7 +79,7 @@ class addvideo_form extends moodleform {
         $mform->addElement('header', 'metadata', get_string('metadata', 'block_opencast'));
         $mform->setExpanded('metadata', true);
 
-        $managedefaultsurl = new moodle_url('/blocks/opencast/managedefaults.php',
+        $managedefaultsurl = new moodle_url('/admin/tool/opencast/managedefaults.php',
             [
                 'courseid' => $this->_customdata['courseid'],
                 'ocinstanceid' => $ocinstanceid,

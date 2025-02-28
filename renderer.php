@@ -602,7 +602,7 @@ class block_opencast_renderer extends plugin_renderer_base {
         if ($videodata->more) {
             $moretext = get_string('morevideos', 'block_opencast');
         }
-        $url = new moodle_url('/blocks/opencast/index.php', ['courseid' => $courseid, 'ocinstanceid' => $ocinstance->id]);
+        $url = new moodle_url('/admin/tool/opencast/index.php', ['courseid' => $courseid, 'ocinstanceid' => $ocinstance->id]);
 
         // In admin page, we redirect to the series overview page to manage series from there.
         if ($SITE->id == $courseid) {
@@ -1251,7 +1251,7 @@ class block_opencast_renderer extends plugin_renderer_base {
     public function render_series_settings_actions(int $ocinstanceid, int $courseid): string {
         $context = new stdClass();
         $context->hasanyactions = true;
-        $url = new moodle_url('/blocks/opencast/manageseries.php', ['courseid' => $courseid, 'ocinstanceid' => $ocinstanceid]);
+        $url = new moodle_url('/admin/tool/opencast/manageseries.php', ['courseid' => $courseid, 'ocinstanceid' => $ocinstanceid]);
         $context->manageseriesurl = $url->out();
         return $this->render_from_template('block_opencast/series_settings_actions', $context);
     }
@@ -1266,7 +1266,7 @@ class block_opencast_renderer extends plugin_renderer_base {
     public function render_defaults_settings_actions(int $ocinstanceid, int $courseid): string {
         $context = new stdClass();
         $context->hasanyactions = true;
-        $url = new moodle_url('/blocks/opencast/managedefaults.php',
+        $url = new moodle_url('/admin/tool/opencast/managedefaults.php',
             ['courseid' => $courseid, 'ocinstanceid' => $ocinstanceid]);
         $context->managedefaultsurl = $url->out();
         return $this->render_from_template('block_opencast/defaults_settings_actions', $context);
